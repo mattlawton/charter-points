@@ -11,6 +11,8 @@ public class Points {
 
     private static final Logger log = LoggerFactory.getLogger(Points.class);
 
+    // go through the customers orders, making a new list where each month is an entry that has accumulating total points
+    // calculate points per order then add to that month's points
     static List<Orders> getPointsByMonth(Customer customer) throws JSONException {
 
         List<Orders> pointsByMonth = new ArrayList<Orders>();

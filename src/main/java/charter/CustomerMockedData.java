@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerMockedData {
-    //list of customer posts
+
     private List<Customer> customers;
 
     private static CustomerMockedData instance = null;
@@ -17,7 +17,7 @@ public class CustomerMockedData {
         return instance;
     }
 
-
+    // mocked customer for api testing with postman
     public CustomerMockedData() throws IOException {
         customers = new ArrayList<Customer>();
         List<Orders> orderList = new ArrayList<Orders>();
@@ -32,12 +32,10 @@ public class CustomerMockedData {
         customers.add(new Customer(1, orderList));
     }
 
-    // return all customers
-    public List<Customer> fetchCustomers() {
+    public List<Customer> getCustomers() {
         return customers;
     }
 
-    // return customer by id
     public Customer getCustomerById(int id) {
         for(Customer b: customers) {
             if(b.getId() == id) {

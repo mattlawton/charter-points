@@ -47,7 +47,7 @@ public class PointsControllerTest {
     }
 
     @Test
-    public void Test_ThreeMonthsFiveOrders() throws Exception {
+    public void Test_ThreeMonthsFiveOrders_Monthly() throws Exception {
 
         Customer mockCustomer = mockCustomer(1);
 

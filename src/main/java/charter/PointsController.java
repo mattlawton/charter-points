@@ -11,13 +11,14 @@ import java.util.List;
 @RestController
 public class PointsController {
 
+    // mocked customer for api testing with postman
     CustomerMockedData customerMockedData = CustomerMockedData.getInstance();
 
     public PointsController() throws IOException {}
 
     @RequestMapping("/customers")
     public List<Customer> customers(){
-        return customerMockedData.fetchCustomers();
+        return customerMockedData.getCustomers();
     }
 
     @RequestMapping("/customers/{id}")
